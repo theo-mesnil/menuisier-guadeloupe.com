@@ -67,6 +67,11 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `keywords`,
+          content:
+            "artisan,menuisier,menuiserie,agencement,agenceur,bâtiment,batiment,guadeloupe",
+        },
       ]
         .concat(
           keywords.length > 0
