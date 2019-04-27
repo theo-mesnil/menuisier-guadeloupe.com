@@ -8,7 +8,7 @@ import configType from "../config/meuble"
 
 const MeublesPage = () => (
   <Layout>
-    <SEO title="Meuble sur mesure, table à manger, bibliothèque - Menuisier Guadeloupe" />
+    <SEO title="Meuble sur mesure, table à manger, bibliothèque" />
     <Type {...configType} />
   </Layout>
 )

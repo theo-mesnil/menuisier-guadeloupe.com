@@ -8,7 +8,7 @@ import configType from "../config/bureau"
 
 const BureauPage = () => (
   <Layout>
-    <SEO title="Bureau sur mesure, étagère - Menuisier Guadeloupe" />
+    <SEO title="Bureau sur mesure, étagère" />
     <Type {...configType} />
   </Layout>
 )

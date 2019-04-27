@@ -8,7 +8,7 @@ import configType from "../config/entreprise"
 
 const EntreprisePage = () => (
   <Layout>
-    <SEO title="Espace d'entreprise sur mesure, aménagement de showroom - Menuisier Guadeloupe" />
+    <SEO title="Espace d'entreprise sur mesure, aménagement de showroom" />
     <Type {...configType} />
   </Layout>
 )

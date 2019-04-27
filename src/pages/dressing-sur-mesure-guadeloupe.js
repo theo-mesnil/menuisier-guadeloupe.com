@@ -8,7 +8,7 @@ import configType from "../config/dressing"
 
 const DressingPage = () => (
   <Layout>
-    <SEO title="Dressing sur mesure - Menuisier Guadeloupe" />
+    <SEO title="Dressing sur mesure" />
     <Type {...configType} />
   </Layout>
 )
