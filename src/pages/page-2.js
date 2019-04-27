@@ -1,16 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from "styled-components"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const Container = styled.div`
+  margin: 3rem auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
 
-export default SecondPage
+export default () => (
+  <Container>
+    <SEO title="test styled component" />
+    <h1>testing page with styled component</h1>
+  </Container>
+)
