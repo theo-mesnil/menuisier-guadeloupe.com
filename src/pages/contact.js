@@ -86,6 +86,7 @@ const IndexPage = () => {
             <a
               href="https://www.google.com/maps/place/16%C2%B016'27.2%22N+61%C2%B015'48.3%22W/@16.2740934,-61.2651623,1015m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d16.2742222!4d-61.2634167"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Chemin de la baie palmiste
             </a>
