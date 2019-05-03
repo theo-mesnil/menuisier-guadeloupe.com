@@ -18,8 +18,8 @@ export default {
         bureau_armoire_4,
         bureau_armoire_5,
       ],
-      caption: bureau_armoire_1,
+      caption: bureau_armoire_5,
     },
   ],
-  captions: [bureau_armoire_4, bureau_armoire_5],
+  captions: [bureau_armoire_4, bureau_armoire_1],
 }

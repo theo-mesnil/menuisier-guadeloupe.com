@@ -7,6 +7,8 @@ import ProjectItem from "../Project"
 import Subtitle from "../Subtitle"
 import Title from "../Title"
 
+import background from "../../images/background.png"
+
 import * as Caption from "./Caption"
 import * as Project from "./Project"
 
@@ -32,18 +34,18 @@ const Type = ({ description, projects, title, captions }) => {
         <Description>{description}</Description>
       </DescriptionWrapper>
       <Caption.Wrapper>
-        {/* <CaptionBackground>
-          <img src={bg} />
-        </CaptionBackground> */}
         <Caption.List>
           {captions.map((caption, index) => (
             <Caption.Item key={`caption-${index}`}>
-              <img src={caption} />
+              <img src={caption} alt={`${title} - aperçu ${index}`} />
             </Caption.Item>
           ))}
         </Caption.List>
       </Caption.Wrapper>
-      <div>
+      <Project.Wrapper>
+        <Project.Background>
+          <img src={background} />
+        </Project.Background>
         <Subtitle>Projets</Subtitle>
         <Project.List>
           {projects.map((project, index) => (
@@ -58,7 +60,7 @@ const Type = ({ description, projects, title, captions }) => {
             </Project.Item>
           ))}
         </Project.List>
-      </div>
+      </Project.Wrapper>
     </section>
   )
 }

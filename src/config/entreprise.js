@@ -18,7 +18,7 @@ export default {
         bar_snack_4,
         bar_snack_5,
       ],
-      caption: bar_snack_3,
+      caption: bar_snack_1,
     },
   ],
   captions: [bar_snack_4, bar_snack_3],

@@ -33,5 +33,5 @@ export default {
       caption: porte_dressing_7,
     },
   ],
-  captions: [porte_dressing_7, porte_dressing_9],
+  captions: [porte_dressing_5, porte_dressing_9],
 }

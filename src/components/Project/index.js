@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   width: 100%;
   padding-top: 80%;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
   transition: margin-top 200ms cubic-bezier(0.39, 0.58, 0.57, 1);
 
   &:hover {
@@ -32,7 +32,7 @@ const Sizing = styled.div`
 const Title = styled.div`
   align-self: flex-end;
   padding: 10px;
-  color: white;
+  color: ${colors.white};
   line-height: 20px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
@@ -95,7 +95,7 @@ class Project extends Component {
 
     return (
       <React.Fragment>
-        <Wrapper onClick={this.openGallery}>
+        <Wrapper onClick={this.openGallery} title={name}>
           <Sizing background={caption}>
             <Title>{name}</Title>
           </Sizing>

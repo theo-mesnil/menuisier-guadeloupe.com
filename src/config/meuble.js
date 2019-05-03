@@ -116,5 +116,5 @@ export default {
       caption: table_a_manger_12,
     },
   ],
-  captions: [bibliotheque_9, table_a_manger_12, armoire_13],
+  captions: [bibliotheque_7, table_a_manger_11, armoire_8],
 }

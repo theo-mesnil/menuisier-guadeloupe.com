@@ -6,9 +6,9 @@ import colors from "../../config/colors"
 const H3 = styled.h3`
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  font-size: 20px;
-  line-height: 25px;
-  color: ${colors.green};
+  font-size: 25px;
+  line-height: 30px;
+  color: ${colors.white};
   margin: 0;
 
   @media (min-width: 768px) {

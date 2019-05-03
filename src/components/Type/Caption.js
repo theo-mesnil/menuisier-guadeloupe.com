@@ -9,49 +9,30 @@ export const Wrapper = styled.div`
   }
 `
 
-// export const Background = styled.div`
-//   position: absolute;
-//   left: -140px;
-//   top: -10px;
-//   z-index: -1;
-
-//   img {
-//     width: 300px;
-//   }
-
-//   @media (min-width: 768px) {
-//     left: -300px;
-
-//     img {
-//       width: 630px;
-//     }
-//   }
-// `
-
 export const List = styled.div`
   display: flex;
 `
 
 export const Item = styled.div`
   align-items: flex-start;
-  max-width: 120px;
+  max-width: 130px;
   margin-right: 10px;
 
   @media (min-width: 768px) {
-    margin-right: 40px;
+    margin-right: 30px;
     max-width: 180px;
   }
 
   &:first-child {
-    margin-top: 30px;
+    margin-top: 5px;
   }
 
   &:nth-child(2) {
-    margin-top: -10px;
+    margin-top: -15px;
   }
 
   &:nth-child(3) {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   &:last-child {
@@ -59,6 +40,6 @@ export const Item = styled.div`
   }
 
   img {
-    border-radius: 8px;
+    border-radius: 12px;
   }
 `
