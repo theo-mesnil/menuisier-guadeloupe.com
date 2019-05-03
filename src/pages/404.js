@@ -3,12 +3,13 @@ import { Link } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
+import Title from "../components/Title"
 
 const ErrorPage = () => (
   <Layout>
     <SEO title="Oups!" />
-    <h1>Oups 404</h1>
-    <Link to="/">Back Home</Link>
+    <Title>Oups 404</Title>
+    <Link to="/">Retourner à l'accueil</Link>
   </Layout>
 )
 

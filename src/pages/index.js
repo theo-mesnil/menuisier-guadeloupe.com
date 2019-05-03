@@ -1,18 +1,28 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { PureComponent } from "react"
+import styled from "styled-components"
 
 import Layout from "../components/Layout"
-import Image from "../components/Image"
+import Navigation from "../components/Navigation"
 import SEO from "../components/Seo"
+import Title from "../components/Title"
+
+const TitleWrapper = styled.div`
+  margin: 40px 0 20px;
+
+  @media (min-width: 768px) {
+    margin: 50px 0 30px;
+  }
+`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Menuiserie Guadeloupe" />
-    <h1>Title</h1>
-    <Link to="meuble-sur-mesure-guadeloupe">Meuble</Link>
-    <Link to="dressing-sur-mesure-guadeloupe">Dressing</Link>
-    <Link to="bureau-sur-mesure-guadeloupe">Bureau</Link>
-    <Link to="espace-entreprise-sur-mesure-guadeloupe">Espace entreprise</Link>
+    <TitleWrapper>
+      <Title isSmall>
+        Travaux bois massif, matériaux composites, médium, stratifié.
+      </Title>
+    </TitleWrapper>
+    <Navigation />
   </Layout>
 )
 

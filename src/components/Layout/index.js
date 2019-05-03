@@ -5,12 +5,36 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
+import styled, { createGlobalStyle } from "styled-components"
 import { Normalize } from "styled-normalize"
 import PropTypes from "prop-types"
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
+import colors from "../../config/colors"
+
 import Header from "../Header"
+
+const GlobalStyle = createGlobalStyle`
+html {
+  font-family: 'Hind', sans-serif;
+  color: ${colors.grey};
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+`
+
+const Wrapper = styled.div`
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+`
 
 const Layout = ({ children, siteTitle }) => (
   <StaticQuery
@@ -26,9 +50,14 @@ const Layout = ({ children, siteTitle }) => (
     render={data => (
       <>
         <Normalize />
-        <Header siteTitle={siteTitle} />
-        <main>{children}</main>
-        <footer>© 2010 / {new Date().getFullYear()}</footer>
+        <GlobalStyle />
+        <Wrapper>
+          <Header siteTitle={siteTitle} />
+          <main>{children}</main>
+          <footer>
+            jb@menuisier-guadeloupe.com © 2010 / {new Date().getFullYear()}
+          </footer>
+        </Wrapper>
       </>
     )}
   />

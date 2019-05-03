@@ -7,7 +7,7 @@ import bureau_armoire_5 from "../images/bureau-sur-mesure/armoire/5.png"
 export default {
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus ligula tellus, ac eleifend eros consectetur at. Suspendisse enim sem, congue nec sollicitudin non, rutrum et mi.",
-  title: "Bureau sur mesure, rangement, étagère...",
+  title: "Bureau sur mesure, rangement, étagère etc.",
   projects: [
     {
       name: "Agencement bureau, rangement dossierse",

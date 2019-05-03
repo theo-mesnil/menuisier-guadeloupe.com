@@ -1,3 +1,5 @@
+import React from "react"
+
 import armoire_1 from "../images/meubles-sur-mesure/armoire/1.png"
 import armoire_2 from "../images/meubles-sur-mesure/armoire/2.png"
 import armoire_3 from "../images/meubles-sur-mesure/armoire/3.png"
@@ -40,10 +42,21 @@ import table_a_manger_10 from "../images/meubles-sur-mesure/table-a-manger/10.pn
 import table_a_manger_11 from "../images/meubles-sur-mesure/table-a-manger/11.png"
 import table_a_manger_12 from "../images/meubles-sur-mesure/table-a-manger/12.png"
 
+const description = (
+  <p>
+    Nous sommes à votre disposition pour fabriquer des menuiseries en bois, en
+    aluminium, et mixte. Nous nous engageons à utiliser des matériaux de qualité
+    en fonction de leur esthétique et leur résistance. Pour répondre à vos
+    besoins, nous vous garantissons un travail sur mesure, conforme au modèle
+    convenus. Nous pouvons prendre en main la conception de vos menuiseries
+    intérieures et extérieures. Vous pouvez ainsi nous confier la fabrication de
+    vos portes, fenêtres, baies vitrées, tables, chaises, vérandas, etc.
+  </p>
+)
+
 export default {
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus ligula tellus, ac eleifend eros consectetur at. Suspendisse enim sem, congue nec sollicitudin non, rutrum et mi.",
-  title: "Meubles sur mesure, table à manger, bibliothèque...",
+  description,
+  title: "Meubles sur mesure, table à manger, bibliothèque etc.",
   projects: [
     {
       name: "Reproduction meuble ancien, meuble vestiaire",
