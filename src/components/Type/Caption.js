@@ -33,13 +33,13 @@ export const List = styled.div`
 `
 
 export const Item = styled.div`
-  display: flex;
   align-items: flex-start;
-  max-width: 200px;
+  max-width: 120px;
   margin-right: 10px;
 
   @media (min-width: 768px) {
     margin-right: 40px;
+    max-width: 180px;
   }
 
   &:first-child {
