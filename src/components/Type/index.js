@@ -2,9 +2,11 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
+import Button from "../Button"
 import Description from "../Description"
 import ProjectItem from "../Project"
 import Subtitle from "../Subtitle"
+import SvgArrowRight from "../Icons/svgArrowRight"
 import Title from "../Title"
 
 import background from "../../images/background.png"
@@ -22,6 +24,12 @@ const TitleWrapper = styled.div`
 
 const DescriptionWrapper = styled.div`
   margin-bottom: 30px;
+`
+
+const LinkToContact = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 `
 
 const Type = ({ description, projects, title, captions }) => {
@@ -61,6 +69,11 @@ const Type = ({ description, projects, title, captions }) => {
           ))}
         </Project.List>
       </Project.Wrapper>
+      <LinkToContact>
+        <Button to="/contact" icon={<SvgArrowRight />}>
+          Demande de devis & contact
+        </Button>
+      </LinkToContact>
     </section>
   )
 }
