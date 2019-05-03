@@ -52,7 +52,7 @@ const Type = ({ description, projects, title, captions }) => {
       </Caption.Wrapper>
       <Project.Wrapper>
         <Project.Background>
-          <img src={background} />
+          <img src={background} alt="fond pour le titre" />
         </Project.Background>
         <Subtitle>Projets</Subtitle>
         <Project.List>

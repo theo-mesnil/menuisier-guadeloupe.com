@@ -19,6 +19,12 @@ const ItemLink = styled(Link)`
   font-size: 30px;
   text-transform: uppercase;
   text-decoration: none;
+  transition: margin-left 200ms cubic-bezier(0.39, 0.58, 0.57, 1), color 400ms;
+
+  &:hover {
+    margin-left: 10px;
+    color: ${colors.greenDark};
+  }
 
   @media (min-width: 768px) {
     font-size: 40px;

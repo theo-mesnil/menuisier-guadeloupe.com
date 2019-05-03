@@ -5,11 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import styled, { createGlobalStyle } from "styled-components"
 import { Normalize } from "styled-normalize"
 import PropTypes from "prop-types"
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import styled, { createGlobalStyle } from "styled-components"
 
 import colors from "../../config/colors"
 
@@ -27,6 +27,12 @@ img {
 
 a {
   text-decoration: none;
+  color: ${colors.black};
+  transition: color 300ms;
+
+  &:hover {
+    color: ${colors.green};
+  }
 }
 `
 
@@ -54,9 +60,9 @@ const Layout = ({ children, siteTitle }) => (
         <Wrapper>
           <Header siteTitle={siteTitle} />
           <main>{children}</main>
-          <footer>
+          {/* <footer>
             jb@menuisier-guadeloupe.com © 2010 / {new Date().getFullYear()}
-          </footer>
+          </footer> */}
         </Wrapper>
       </>
     )}
