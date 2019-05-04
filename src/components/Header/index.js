@@ -2,15 +2,22 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
-import colors from "../../config/colors"
-
-import SvgIcon from "../Icons/svgWood"
+import Button from "../Button"
+import SvgWood from "../Icons/svgWood"
 import SvgMail from "../Icons/svgMail"
+
+import colors from "../../config/colors"
 
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: ${colors.black};
+  padding: 10px 15px;
+
+  @media (min-width: 768px) {
+    padding: 5px 20px;
+  }
 `
 
 const Logo = styled(Link)`
@@ -19,60 +26,51 @@ const Logo = styled(Link)`
 `
 
 const Title = styled.h2`
-  font-size: 16px;
-  color: ${colors.grey};
-  font-weight: normal;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: ${colors.white};
 `
 
-const Svg = styled.div`
-  display: flex;
+const SubTitle = styled.h3`
+  font-size: 16px;
+  color: ${colors.greyLight};
+  font-weight: normal;
+  opacity: 0.8;
+`
+
+const Wood = styled.div`
+  display: none;
   margin-right: 10px;
-  font-size: 50px;
+  font-size: 65px;
+  transition: margin-right 200ms cubic-bezier(0.39, 0.58, 0.57, 1);
+
+  @media (min-width: 460px) {
+    display: flex;
+  }
 
   svg path {
-    fill: ${colors.grey};
-  }
-`
-
-const Contact = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${colors.grey};
-  width: 35px;
-  height: 35px;
-  border-radius: 35px;
-  transition: background 300ms;
-
-  svg {
-    width: 25px;
-    height: 25px;
-
-    path {
-      fill: ${colors.white};
-    }
+    fill: ${colors.white};
   }
 
-  &:hover {
-    background: ${colors.green};
+  ${Logo}:hover & {
+    margin-right: 13px;
   }
 `
 
 const Header = () => (
   <Wrapper>
     <Logo to="/">
-      <Svg>
-        <SvgIcon />
-      </Svg>
-      <Title>
-        <strong>Jean-Bernard MESNIL</strong>
-        <br />
-        Menuisier en Guadeloupe
-      </Title>
+      <Wood>
+        <SvgWood />
+      </Wood>
+      <div>
+        <Title>Jean-Bernard MESNIL</Title>
+        <SubTitle>Menuisier en Guadeloupe</SubTitle>
+      </div>
     </Logo>
-    <Contact to="/contact" title="Me contacter">
-      <SvgMail />
-    </Contact>
+    <Button to="/contact" icon={<SvgMail />} hideTextOnMobile>
+      Me contacter
+    </Button>
   </Wrapper>
 )
 

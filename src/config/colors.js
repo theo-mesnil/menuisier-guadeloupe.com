@@ -1,8 +1,12 @@
 export default {
-  black: "#1F261D",
-  brown: "#8C5B3F",
-  green: "#57A651",
-  greenDark: "#498c44",
-  grey: "#505050",
-  white: "#FFF",
+  black: "#000000",
+  green: "#4E944C",
+  grey: "#1D1D1D",
+  greyDark: "#101010",
+  greyLight: "#D2D2D2",
+  red: "#A64037",
+  redLight: "#DE564A",
+  white: "#FFFFFF",
+  yellow: "#BF8A49",
+  yellowLight: "#E9A85A",
 }

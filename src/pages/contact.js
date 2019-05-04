@@ -6,20 +6,10 @@ import Layout from "../components/Layout"
 
 import Button from "../components/Button"
 import Map from "../components/Map"
-import SEO from "../components/Seo"
-import Title from "../components/Title"
 import SvgMail from "../components/Icons/svgMail"
 import SvgContactPhone from "../components/Icons/svgContactPhone"
 
 import colors from "../config/colors"
-
-const TitleWrapper = styled.div`
-  margin: 40px 0 20px;
-
-  @media (min-width: 768px) {
-    margin: 50px 0 30px;
-  }
-`
 
 const Wrapper = styled.div`
   display: flex;
@@ -41,11 +31,10 @@ const Block = styled.div`
 `
 
 const SubTitle = styled.h3`
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
   font-size: 18px;
   margin: 0 0 20px;
-  color: ${colors.green};
+  color: ${colors.red};
 `
 
 const MapWrapper = styled.div`
@@ -63,7 +52,7 @@ const Phone = styled.span`
     height: 30px;
 
     path {
-      fill: ${colors.brown};
+      fill: ${colors.yellow};
     }
   }
 `
@@ -72,11 +61,7 @@ const coords = [16.274214, -61.263401]
 
 const IndexPage = () => {
   return (
-    <Layout>
-      <SEO title="Contact - Demande de devis" />
-      <TitleWrapper>
-        <Title>Me contacter</Title>
-      </TitleWrapper>
+    <Layout title="Me contacter" seoTitle="Contact - Demande de devis">
       <Wrapper>
         <Block>
           <SubTitle>Coordonnées</SubTitle>

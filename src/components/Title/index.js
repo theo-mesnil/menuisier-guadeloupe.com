@@ -2,21 +2,41 @@ import React from "react"
 import styled from "styled-components"
 
 import colors from "../../config/colors"
+import background from "../../images/wood.jpg"
 
-const H1 = styled.h1`
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-size: ${props => (props.isSmall ? "20px" : "30px")};
-  line-height: ${props => (props.isSmall ? "25px" : "35px")};
-  color: ${colors.brown};
-  margin: 0;
+const Wrapper = styled.div`
+  background: url(${background}) center center;
+  background-size: cover;
+`
+
+const Content = styled.div`
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 25px 20px;
 
   @media (min-width: 768px) {
-    font-size: ${props => (props.isSmall ? "30px" : "40px")};
-    line-height: ${props => (props.isSmall ? "35px" : "45px")};
+    padding: 50px 20px;
   }
 `
 
-const Title = ({ children, isSmall }) => <H1 isSmall={isSmall}>{children}</H1>
+const H1 = styled.h1`
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  line-height: 35px;
+  color: ${colors.white};
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+    line-height: 45px;
+  }
+`
+
+const Title = ({ children }) => (
+  <Wrapper>
+    <Content>
+      <H1>{children}</H1>
+    </Content>
+  </Wrapper>
+)
 
 export default Title

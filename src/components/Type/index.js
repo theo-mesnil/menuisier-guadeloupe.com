@@ -7,20 +7,11 @@ import Description from "../Description"
 import ProjectItem from "../Project"
 import Subtitle from "../Subtitle"
 import SvgArrowRight from "../Icons/svgArrowRight"
-import Title from "../Title"
 
 import background from "../../images/background.png"
 
 import * as Caption from "./Caption"
 import * as Project from "./Project"
-
-const TitleWrapper = styled.div`
-  margin: 40px 0 20px;
-
-  @media (min-width: 768px) {
-    margin: 50px 0 30px;
-  }
-`
 
 const DescriptionWrapper = styled.div`
   margin-bottom: 30px;
@@ -35,9 +26,6 @@ const LinkToContact = styled.div`
 const Type = ({ description, projects, title, captions }) => {
   return (
     <section>
-      <TitleWrapper>
-        <Title>{title} en guadeloupe</Title>
-      </TitleWrapper>
       <DescriptionWrapper>
         <Description>{description}</Description>
       </DescriptionWrapper>

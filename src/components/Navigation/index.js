@@ -5,25 +5,24 @@ import styled from "styled-components"
 import colors from "../../config/colors"
 
 const List = styled.ul`
-  font-family: "Raleway", sans-serif;
+  font-family: "Playfair Display", serif;
   list-style-type: none;
   padding: 0;
 `
 
 const Item = styled.li`
-  padding: 5px 0;
+  padding-bottom: 5px;
 `
 
 const ItemLink = styled(Link)`
-  color: ${colors.green};
+  color: ${colors.red};
   font-size: 30px;
-  text-transform: uppercase;
   text-decoration: none;
   transition: margin-left 200ms cubic-bezier(0.39, 0.58, 0.57, 1), color 400ms;
 
   &:hover {
     margin-left: 10px;
-    color: ${colors.greenDark};
+    color: ${colors.yellow};
   }
 
   @media (min-width: 768px) {

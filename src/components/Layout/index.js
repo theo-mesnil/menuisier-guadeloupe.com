@@ -8,17 +8,21 @@
 import { Normalize } from "styled-normalize"
 import PropTypes from "prop-types"
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
 
-import colors from "../../config/colors"
-
 import Header from "../Header"
+import Footer from "../Footer"
+import Title from "../Title"
+import SEO from "../Seo"
+
+import colors from "../../config/colors"
 
 const GlobalStyle = createGlobalStyle`
 html {
   font-family: 'Hind', sans-serif;
-  color: ${colors.grey};
+  background: ${colors.grey};
+  color: ${colors.greyLight};
+  line-height: 1.4;
 }
 
 img {
@@ -27,46 +31,51 @@ img {
 
 a {
   text-decoration: none;
-  color: ${colors.black};
+  color: ${colors.yellow};
   transition: color 300ms;
 
   &:hover {
-    color: ${colors.green};
+    color: ${colors.yellowLight};
   }
 }
-`
 
+h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+`
 const Wrapper = styled.div`
-  max-width: 700px;
+  max-width: 970px;
   margin: 0 auto;
-  padding: 20px;
 `
 
-const Layout = ({ children, siteTitle }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Normalize />
-        <GlobalStyle />
-        <Wrapper>
-          <Header siteTitle={siteTitle} />
-          <main>{children}</main>
-          {/* <footer>
-            jb@menuisier-guadeloupe.com © 2010 / {new Date().getFullYear()}
-          </footer> */}
-        </Wrapper>
-      </>
-    )}
-  />
+const Content = styled.div`
+  margin: 10px 10px 0 10px;
+  background: ${colors.greyDark};
+  box-sizing: border-box;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    margin: 20px 20px 0 20px;
+  }
+`
+
+const Layout = ({ children, title, seoTitle }) => (
+  <>
+    <Normalize />
+    <GlobalStyle />
+    <Wrapper>
+      <SEO title={seoTitle || title} />
+      <Content>
+        <Header />
+        <Title>{title}</Title>
+        {children}
+        <Footer />
+      </Content>
+    </Wrapper>
+  </>
 )
 
 Layout.propTypes = {
