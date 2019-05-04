@@ -6,23 +6,23 @@ import colors from "../../config/colors"
 
 const List = styled.ul`
   font-family: "Playfair Display", serif;
-  text-align: center;
+  font-size: ${props => (props.isSmall ? "20px" : "30px")};
+  line-height: ${props => (props.isSmall ? "25px" : "40px")};
   color: ${colors.yellow};
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: ${props => (props.isSmall ? "30px" : "50px")};
+    line-height: ${props => (props.isSmall ? "40px" : "70px")};
+  }
 `
 
 const Item = styled.li`
   display: inline;
   list-style: none;
-  font-size: 30px;
-  line-height: 40px;
 
   &:nth-child(n + 2):before {
     content: "-";
-  }
-
-  @media (min-width: 768px) {
-    font-size: 50px;
-    line-height: 70px;
   }
 `
 
@@ -37,9 +37,9 @@ const ItemLink = styled(Link)`
   }
 `
 
-const Navigation = () => (
+const Navigation = ({ isSmall }) => (
   <nav>
-    <List>
+    <List isSmall={isSmall}>
       <Item>
         <ItemLink to="/meuble-sur-mesure-guadeloupe">Meuble</ItemLink>
       </Item>

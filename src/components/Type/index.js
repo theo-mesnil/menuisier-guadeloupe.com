@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import Button from "../Button"
 import Description from "../Description"
+import Navigation from "../Navigation"
 import ProjectItem from "../Project"
 import SvgBill from "../Icons/svgBill"
 
@@ -20,7 +21,11 @@ const DescriptionWrapper = styled.div`
 const LinkToContact = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px 0 30px;
+
+  @media (min-width: 768px) {
+    margin: 40px 0 40px;
+  }
 `
 
 const H4 = styled.h4`
@@ -75,6 +80,7 @@ const Type = ({ description, projects, title, captions }) => {
           Demande de devis & contact
         </Button>
       </LinkToContact>
+      <Navigation isSmall />
     </section>
   )
 }
