@@ -82,12 +82,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
-    >
-      <link
-        href="https://fonts.googleapis.com/css?family=Hind:400,600|Playfair+Display:700"
-        rel="stylesheet"
-      />
-    </Helmet>
+    />
   )
 }
 

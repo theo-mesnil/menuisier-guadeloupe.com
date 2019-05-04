@@ -30,11 +30,10 @@ const Block = styled.div`
   }
 `
 
-const SubTitle = styled.h3`
-  font-family: "Playfair Display", serif;
-  font-size: 18px;
+const SubTitle = styled.h4`
   margin: 0 0 20px;
-  color: ${colors.red};
+  font-size: 18px;
+  color: ${colors.white};
 `
 
 const MapWrapper = styled.div`
@@ -52,9 +51,13 @@ const Phone = styled.span`
     height: 30px;
 
     path {
-      fill: ${colors.yellow};
+      fill: ${colors.greyLight};
     }
   }
+`
+
+const Section = styled.p`
+  margin-bottom: 15px;
 `
 
 const coords = [16.274214, -61.263401]
@@ -65,7 +68,7 @@ const IndexPage = () => {
       <Wrapper>
         <Block>
           <SubTitle>Coordonnées</SubTitle>
-          <p>
+          <Section>
             Jean-Bernard MESNIL
             <br />
             <a
@@ -79,17 +82,17 @@ const IndexPage = () => {
             97118 Saint-François
             <br />
             Guadeloupe
-          </p>
-          <p>
+          </Section>
+          <Section>
             <Phone>
               <SvgContactPhone />
             </Phone>
             <br />
-            0690638483
+            06 90 63 84 83
             <br />
-            Fax : 0972197559
-          </p>
-          <p>
+            Fax : 09 72 19 75 59
+          </Section>
+          <Section>
             <a href="mailto:jb@menuisier-guadeloupe.com">
               jb@menuisier-guadeloupe.com
             </a>
@@ -101,7 +104,7 @@ const IndexPage = () => {
             >
               M'envoyer un email
             </Button>
-          </p>
+          </Section>
         </Block>
         <Block>
           <SubTitle>Localisation</SubTitle>

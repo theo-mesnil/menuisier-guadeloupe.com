@@ -6,47 +6,56 @@ import colors from "../../config/colors"
 
 const List = styled.ul`
   font-family: "Playfair Display", serif;
-  list-style-type: none;
-  padding: 0;
+  text-align: center;
+  color: ${colors.yellow};
 `
 
 const Item = styled.li`
-  padding-bottom: 5px;
-`
-
-const ItemLink = styled(Link)`
-  color: ${colors.red};
+  display: inline;
+  list-style: none;
   font-size: 30px;
-  text-decoration: none;
-  transition: margin-left 200ms cubic-bezier(0.39, 0.58, 0.57, 1), color 400ms;
+  line-height: 40px;
 
-  &:hover {
-    margin-left: 10px;
-    color: ${colors.yellow};
+  &:nth-child(n + 2):before {
+    content: "-";
   }
 
   @media (min-width: 768px) {
-    font-size: 40px;
+    font-size: 50px;
+    line-height: 70px;
   }
 `
 
-const Navigation = ({ handleNavigationHovered }) => (
-  <List>
-    <Item>
-      <ItemLink to="/meuble-sur-mesure-guadeloupe">Meuble</ItemLink>
-    </Item>
-    <Item>
-      <ItemLink to="/dressing-sur-mesure-guadeloupe">Dressing</ItemLink>
-    </Item>
-    <Item>
-      <ItemLink to="/bureau-sur-mesure-guadeloupe">Bureau</ItemLink>
-    </Item>
-    <Item>
-      <ItemLink to="/espace-entreprise-sur-mesure-guadeloupe">
-        Espace entreprise
-      </ItemLink>
-    </Item>
-  </List>
+const ItemLink = styled(Link)`
+  border-radius: 5px;
+  padding: 0 10px;
+  transition: color 400ms, background 400ms;
+
+  ${Item}:hover & {
+    background: ${colors.yellow};
+    color: ${colors.white};
+  }
+`
+
+const Navigation = () => (
+  <nav>
+    <List>
+      <Item>
+        <ItemLink to="/meuble-sur-mesure-guadeloupe">Meuble</ItemLink>
+      </Item>
+      <Item>
+        <ItemLink to="/dressing-sur-mesure-guadeloupe">Dressing</ItemLink>
+      </Item>
+      <Item>
+        <ItemLink to="/bureau-sur-mesure-guadeloupe">Bureau</ItemLink>
+      </Item>
+      <Item>
+        <ItemLink to="/espace-entreprise-sur-mesure-guadeloupe">
+          Espace entreprise
+        </ItemLink>
+      </Item>
+    </List>
+  </nav>
 )
 
 export default Navigation

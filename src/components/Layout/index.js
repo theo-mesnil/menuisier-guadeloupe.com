@@ -5,6 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
+import Helmet from "react-helmet"
 import { Normalize } from "styled-normalize"
 import PropTypes from "prop-types"
 import React from "react"
@@ -44,12 +45,12 @@ h1, h2, h3, p, ul {
   padding: 0;
 }
 `
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   max-width: 970px;
   margin: 0 auto;
 `
 
-const Content = styled.div`
+const Center = styled.div`
   margin: 10px 10px 0 10px;
   background: ${colors.greyDark};
   box-sizing: border-box;
@@ -62,18 +63,34 @@ const Content = styled.div`
   }
 `
 
+const Content = styled.article`
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 25px 20px;
+
+  @media (min-width: 768px) {
+    padding: 50px 20px;
+  }
+`
+
 const Layout = ({ children, title, seoTitle }) => (
   <>
     <Normalize />
     <GlobalStyle />
     <Wrapper>
       <SEO title={seoTitle || title} />
-      <Content>
+      <Helmet>
+        <link
+          href="https://fonts.googleapis.com/css?family=Hind:400,600|Playfair+Display:700"
+          rel="stylesheet"
+        />
+      </Helmet>
+      <Center>
         <Header />
         <Title>{title}</Title>
-        {children}
+        <Content>{children}</Content>
         <Footer />
-      </Content>
+      </Center>
     </Wrapper>
   </>
 )

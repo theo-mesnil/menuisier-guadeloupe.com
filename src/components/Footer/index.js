@@ -12,6 +12,7 @@ const Wrapper = styled.footer`
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 20px;
   }
 `
 
@@ -27,6 +28,10 @@ const Item = styled.li`
   }
 `
 
+const ItemLink = styled(Link)`
+  color: ${colors.greyLight};
+`
+
 const Legals = styled.div`
   margin-top: 5px;
   font-size: 13px;
@@ -38,19 +43,19 @@ const H2 = styled.h2`
 
 const Footer = () => (
   <Wrapper>
-    <div>
+    <nav>
       <ul>
         <Item>
-          <Link to="/">Accueil</Link>
+          <ItemLink to="/">Accueil</ItemLink>
         </Item>
         <Item>
-          <Link to="/contact">Me contacter</Link>
+          <ItemLink to="/contact">Me contacter</ItemLink>
         </Item>
         <Item>
-          <Link to="/plan-du-site">Plan du site</Link>
+          <ItemLink to="/plan-du-site">Plan du site</ItemLink>
         </Item>
       </ul>
-    </div>
+    </nav>
     <Legals>
       © 2010 - {new Date().getFullYear()} / Tous droits réservés
       <br />

@@ -68,7 +68,12 @@ const Header = () => (
         <SubTitle>Menuisier en Guadeloupe</SubTitle>
       </div>
     </Logo>
-    <Button to="/contact" icon={<SvgMail />} hideTextOnMobile>
+    <Button
+      to="/contact"
+      icon={<SvgMail />}
+      variant="outlined"
+      hideTextOnMobile
+    >
       Me contacter
     </Button>
   </Wrapper>

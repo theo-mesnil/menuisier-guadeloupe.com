@@ -5,13 +5,13 @@ import styled from "styled-components"
 import Button from "../Button"
 import Description from "../Description"
 import ProjectItem from "../Project"
-import Subtitle from "../Subtitle"
-import SvgArrowRight from "../Icons/svgArrowRight"
-
-import background from "../../images/background.png"
+import SvgBill from "../Icons/svgBill"
 
 import * as Caption from "./Caption"
 import * as Project from "./Project"
+
+import background from "../../images/background.png"
+import colors from "../../config/colors"
 
 const DescriptionWrapper = styled.div`
   margin-bottom: 30px;
@@ -21,6 +21,19 @@ const LinkToContact = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+`
+
+const H4 = styled.h4`
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  line-height: 30px;
+  color: ${colors.white};
+  margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+    line-height: 35px;
+  }
 `
 
 const Type = ({ description, projects, title, captions }) => {
@@ -42,7 +55,7 @@ const Type = ({ description, projects, title, captions }) => {
         <Project.Background>
           <img src={background} alt="fond pour le titre" />
         </Project.Background>
-        <Subtitle>Projets</Subtitle>
+        <H4>Projets</H4>
         <Project.List>
           {projects.map((project, index) => (
             <Project.Item key={`project-${index}`}>
@@ -58,7 +71,7 @@ const Type = ({ description, projects, title, captions }) => {
         </Project.List>
       </Project.Wrapper>
       <LinkToContact>
-        <Button to="/contact" icon={<SvgArrowRight />}>
+        <Button to="/contact" icon={<SvgBill />}>
           Demande de devis & contact
         </Button>
       </LinkToContact>

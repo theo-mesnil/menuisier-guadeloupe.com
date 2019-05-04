@@ -3,6 +3,7 @@ module.exports = {
     title: `Menuisier en Guadeloupe Saint-François - ameublement - batiment`,
     description: `Mesnil Jean-Bernard, menuisier, artisan menuisier, d'agencement et du bâtiment en Guadeloupe.`,
     author: `@mesniltheo`,
+    siteUrl: `http://menuisier-guadeloupe.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
