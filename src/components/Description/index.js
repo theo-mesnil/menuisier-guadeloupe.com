@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   text-align: justify;
 `
 

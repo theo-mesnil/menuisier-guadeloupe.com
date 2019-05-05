@@ -2,44 +2,45 @@ import styled from "styled-components"
 
 export const Wrapper = styled.div`
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   @media (min-width: 768px) {
-    margin-bottom: 40px;
+    margin-bottom: 0;
+    margin-right: 20px;
   }
 `
 
 export const List = styled.div`
-  display: flex;
+  position: relative;
+  width: 270px;
+  height: 210px;
+  margin: 0 auto;
 `
 
 export const Item = styled.div`
   align-items: flex-start;
-  max-width: 130px;
-  margin-right: 10px;
+  position: absolute;
 
   @media (min-width: 768px) {
-    margin-right: 30px;
-    max-width: 180px;
   }
 
   &:first-child {
-    margin-top: 5px;
-  }
-
-  &:nth-child(2) {
-    margin-top: -15px;
-  }
-
-  &:nth-child(3) {
-    margin-top: 15px;
+    width: 200px;
+    right: 0;
+    top: 0;
   }
 
   &:last-child {
-    margin-right: 0px;
+    width: 150px;
+    bottom: 0;
+    left: 0;
+
+    img {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+    }
   }
 
   img {
-    border-radius: 12px;
+    border-radius: 5px;
   }
 `

@@ -14,7 +14,15 @@ import * as Project from "./Project"
 import colors from "../../config/colors"
 
 const DescriptionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-bottom: 30px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 34px;
+  }
 `
 
 const LinkToContact = styled.div`
@@ -44,17 +52,17 @@ const Type = ({ description, projects, title, captions }) => {
   return (
     <section>
       <DescriptionWrapper>
+        <Caption.Wrapper>
+          <Caption.List>
+            {captions.map((caption, index) => (
+              <Caption.Item key={`caption-${index}`}>
+                <img src={caption} alt={`${title} - aperçu ${index}`} />
+              </Caption.Item>
+            ))}
+          </Caption.List>
+        </Caption.Wrapper>
         <Description>{description}</Description>
       </DescriptionWrapper>
-      <Caption.Wrapper>
-        <Caption.List>
-          {captions.map((caption, index) => (
-            <Caption.Item key={`caption-${index}`}>
-              <img src={caption} alt={`${title} - aperçu ${index}`} />
-            </Caption.Item>
-          ))}
-        </Caption.List>
-      </Caption.Wrapper>
       <Project.Wrapper>
         <H4>Projets</H4>
         <Project.List>
