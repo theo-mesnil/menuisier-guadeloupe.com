@@ -55,7 +55,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:image`,
-          content: `http://www.menuisier-guadeloupe.com${ogImage}`,
+          content: `https://www.menuisier-guadeloupe.com${ogImage}`,
         },
         {
           name: `twitter:card`,
@@ -75,7 +75,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `twitter:image`,
-          content: `http://www.menuisier-guadeloupe.com${ogImage}`,
+          content: `https://www.menuisier-guadeloupe.com${ogImage}`,
         },
         {
           name: `keywords`,
