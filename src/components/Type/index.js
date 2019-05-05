@@ -11,7 +11,6 @@ import SvgBill from "../Icons/svgBill"
 import * as Caption from "./Caption"
 import * as Project from "./Project"
 
-import background from "../../images/background.png"
 import colors from "../../config/colors"
 
 const DescriptionWrapper = styled.div`
@@ -57,9 +56,6 @@ const Type = ({ description, projects, title, captions }) => {
         </Caption.List>
       </Caption.Wrapper>
       <Project.Wrapper>
-        <Project.Background>
-          <img src={background} alt="fond pour le titre" />
-        </Project.Background>
         <H4>Projets</H4>
         <Project.List>
           {projects.map((project, index) => (

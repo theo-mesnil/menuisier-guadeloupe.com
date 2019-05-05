@@ -35,7 +35,11 @@ const Title = styled.div`
   color: ${colors.white};
   line-height: 20px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8)
+  );
   transition: padding 200ms cubic-bezier(0.39, 0.58, 0.57, 1);
   box-sizing: border-box;
 
@@ -44,10 +48,10 @@ const Title = styled.div`
   }
 
   ${Wrapper}:hover & {
-    padding: 10px 10px 20px 10px;
+    padding: 10px 10px 15px 10px;
 
     @media (min-width: 768px) {
-      padding: 15px 15px 20px 15px;
+      padding: 30px 15px 20px 15px;
     }
   }
 `
