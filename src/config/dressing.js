@@ -1,3 +1,5 @@
+import React from "react"
+
 import porte_dressing_1 from "../images/dressing-sur-mesure/porte-de-dressing/1.png"
 import porte_dressing_2 from "../images/dressing-sur-mesure/porte-de-dressing/2.png"
 import porte_dressing_3 from "../images/dressing-sur-mesure/porte-de-dressing/3.png"
@@ -10,9 +12,32 @@ import porte_dressing_9 from "../images/dressing-sur-mesure/porte-de-dressing/9.
 import porte_dressing_10 from "../images/dressing-sur-mesure/porte-de-dressing/10.png"
 import porte_dressing_11 from "../images/dressing-sur-mesure/porte-de-dressing/11.png"
 
+const description = (
+  <div>
+    <p>
+      Avec une expérience de plus de 30 ans, je vous vous confectionne des{" "}
+      <strong>dressings, armoires etc. sur mesure</strong>.
+    </p>
+    <br />
+    <p>
+      Le meuble sur-mesure est de plus en plus tendance. Il conjugue de nombreux
+      avantages qui peuvent vous inciter à faire ce choix pour aménager votre
+      pièce. Que ce soit pour se démarquer ou encore maitriser des choix
+      esthétiques, les <strong>meubles sur mesure</strong> sont une véritable
+      option qu’il ne fait pas négliger.
+    </p>
+    <br />
+    <p>
+      La <strong>menuiserie sur mesure</strong> est ma spécialité et je
+      m'éfforce de créer pour mes clients des meubles adaptés à leur exigences,
+      correspondant parfaitement à leur style et leur goût, et surtout
+      idéalement adaptés à leur intérieur et leur décoration.
+    </p>
+  </div>
+)
+
 export default {
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus ligula tellus, ac eleifend eros consectetur at. Suspendisse enim sem, congue nec sollicitudin non, rutrum et mi.",
+  description,
   title: "Dressing sur mesure",
   projects: [
     {

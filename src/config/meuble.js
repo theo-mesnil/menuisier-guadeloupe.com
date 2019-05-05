@@ -43,20 +43,35 @@ import table_a_manger_11 from "../images/meubles-sur-mesure/table-a-manger/11.pn
 import table_a_manger_12 from "../images/meubles-sur-mesure/table-a-manger/12.png"
 
 const description = (
-  <p>
-    Nous sommes à votre disposition pour fabriquer des menuiseries en bois, en
-    aluminium, et mixte. Nous nous engageons à utiliser des matériaux de qualité
-    en fonction de leur esthétique et leur résistance. Pour répondre à vos
-    besoins, nous vous garantissons un travail sur mesure, conforme au modèle
-    convenus. Nous pouvons prendre en main la conception de vos menuiseries
-    intérieures et extérieures. Vous pouvez ainsi nous confier la fabrication de
-    vos portes, fenêtres, baies vitrées, tables, chaises, vérandas, etc.
-  </p>
+  <div>
+    <p>
+      Avec une expérience de plus de 30 ans, je vous vous confectionne des{" "}
+      <strong>
+        meubles, armoires, table à manger, bibliothèque etc. sur mesure
+      </strong>
+      .
+    </p>
+    <br />
+    <p>
+      Le meuble sur-mesure est de plus en plus tendance. Il conjugue de nombreux
+      avantages qui peuvent vous inciter à faire ce choix pour aménager votre
+      pièce. Que ce soit pour se démarquer ou encore maitriser des choix
+      esthétiques, les <strong>meubles sur mesure</strong> sont une véritable
+      option qu’il ne fait pas négliger.
+    </p>
+    <br />
+    <p>
+      La <strong>menuiserie sur mesure</strong> est ma spécialité et je
+      m'éfforce de créer pour mes clients des meubles adaptés à leur exigences,
+      correspondant parfaitement à leur style et leur goût, et surtout
+      idéalement adaptés à leur intérieur et leur décoration.
+    </p>
+  </div>
 )
 
 export default {
   description,
-  title: "Meubles sur mesure, table à manger, bibliothèque etc.",
+  title: "Meubles sur mesure, table à manger, armoires, bibliothèque etc.",
   projects: [
     {
       name: "Reproduction meuble ancien, meuble vestiaire",
