@@ -7,7 +7,7 @@ import colors from "../../config/colors"
 const Wrapper = styled.div`
   display: inline-flex;
   align-items: center;
-  padding: 10px 15px 10px 10px;
+  padding: 10px;
   color: ${props => (props.variant === "outlined" ? colors.red : colors.white)};
   background: ${props => props.variant !== "outlined" && colors.red};
   border: 2px solid ${colors.red};
