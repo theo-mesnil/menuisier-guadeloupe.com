@@ -57,7 +57,7 @@ const description = (
       avantages qui peuvent vous inciter à faire ce choix pour aménager votre
       pièce. Que ce soit pour se démarquer ou encore maitriser des choix
       esthétiques, les <strong>meubles sur mesure</strong> sont une véritable
-      option qu’il ne fait pas négliger.
+      option qu’il ne faut pas négliger.
     </p>
     <br />
     <p>

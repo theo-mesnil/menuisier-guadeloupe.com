@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import ogImage from "../../images/og-image.jpg"
+
 function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -52,6 +54,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `http://www.menuisier-guadeloupe.com${ogImage}`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -66,6 +72,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          property: `twitter:image`,
+          content: `http://www.menuisier-guadeloupe.com${ogImage}`,
         },
         {
           name: `keywords`,

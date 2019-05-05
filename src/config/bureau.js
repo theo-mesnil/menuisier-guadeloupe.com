@@ -18,7 +18,7 @@ const description = (
       avantages qui peuvent vous inciter à faire ce choix pour aménager votre
       pièce. Que ce soit pour se démarquer ou encore maitriser des choix
       esthétiques, les <strong>meubles sur mesure</strong> sont une véritable
-      option qu’il ne fait pas négliger.
+      option qu’il ne faut pas négliger.
     </p>
     <br />
     <p>
@@ -31,8 +31,7 @@ const description = (
 )
 
 export default {
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus ligula tellus, ac eleifend eros consectetur at. Suspendisse enim sem, congue nec sollicitudin non, rutrum et mi.",
+  description,
   title: "Bureau sur mesure, rangement, étagère etc.",
   projects: [
     {

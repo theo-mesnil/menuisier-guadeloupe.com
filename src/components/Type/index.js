@@ -56,7 +56,11 @@ const Type = ({ description, projects, title, captions }) => {
           <Caption.List>
             {captions.map((caption, index) => (
               <Caption.Item key={`caption-${index}`}>
-                <img src={caption} alt={`${title} - aperçu ${index}`} />
+                <img
+                  src={caption}
+                  aria-labelledby={`${title} - aperçu ${index}`}
+                  alt={`${title} - aperçu ${index}`}
+                />
               </Caption.Item>
             ))}
           </Caption.List>
