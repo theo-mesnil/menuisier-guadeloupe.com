@@ -22,12 +22,12 @@ const Content = styled.div`
 const H1 = styled.h1`
   font-family: "Playfair Display", serif;
   font-size: 30px;
-  line-height: 35px;
+  line-height: 40px;
   color: ${colors.white};
 
   @media (min-width: 768px) {
     font-size: 40px;
-    line-height: 45px;
+    line-height: 50px;
   }
 `
 
