@@ -93,13 +93,13 @@ const IndexPage = () => {
             Fax : 09 72 19 75 59
           </Section>
           <Section>
-            <a href="mailto:jb@menuisier-guadeloupe.com">
-              jb@menuisier-guadeloupe.com
+            <a href="mailto:jb.mesnil971@gmail.com">
+              jb.mesnil971@gmail.com
             </a>
             <br />
             <br />
             <Button
-              href="mailto:jb@menuisier-guadeloupe.com"
+              href="mailto:jb.mesnil971@gmail.com"
               icon={<SvgMail />}
             >
               M'envoyer un email
